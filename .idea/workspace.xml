@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/run_test.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.40677965">
-              <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -430,7 +430,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/run_test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40677965">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
