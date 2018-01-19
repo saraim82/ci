@@ -1,0 +1,45 @@
+---
+resources:
+- name: resource-carts
+  type: git
+  source:
+    uri: https://github.com/microservices-demo/carts.git
+    branch: master
+
+jobs:
+- name: job-build
+  public: true
+  plan:
+  - get: resource-carts
+  - task: compile
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: maven, tag: alpine}
+      inputs:
+      - name: resource-carts
+      run:
+        dir: resource-carts
+        path: mvn
+        args:
+        - -DskipTests
+        - package
+
+- name: job-test
+  public: true
+  plan:
+  - get: resource-carts
+  - task: test
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: alpine, tag: latest}
+      inputs:
+      - name: resource-carts
+      run:
+        dir: resource-carts
+        path: ./test/test.sh
+        args:
+        - /test/unit.py
