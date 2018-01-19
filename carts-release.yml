@@ -41,7 +41,7 @@ jobs:
       platform: linux
       image_resource:
         type: docker-image
-        source: {repository: alpine, tag: latest}
+        source: {repository: ubuntu, tag: latest}
       inputs:
       - name: resource-carts
       - name: resource-git
