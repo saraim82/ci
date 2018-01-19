@@ -5,8 +5,6 @@ resources:
   source:
     uri: https://github.com/microservices-demo/carts.git
     branch: master
-
-resources:
 - name: resource-git
   type: git
   source:
@@ -47,5 +45,5 @@ jobs:
       inputs:
       - name: resource-git
       run:
-        dir: resource-git
-        path: ./run_test.sh
+        dir: ci-training/carts/scripts
+        path:  ./run_test.sh
