@@ -3,4 +3,4 @@
 set -e # fail fast
 set -x # print commands
 
-cd
+cd resource-carts/test && ./test.sh unit.py

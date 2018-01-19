@@ -7,10 +7,10 @@ resources:
     branch: master
 
 resources:
-- name: resource-carts
+- name: resource-git
   type: git
   source:
-    uri: https://github.com/microservices-demo/carts.git
+    uri: https://github.com/saraim82/ci.git
     branch: master
 
 jobs:
@@ -37,6 +37,7 @@ jobs:
   public: true
   plan:
   - get: resource-carts
+  - get: resource-git
   - task: test
     config:
       platform: linux
@@ -44,9 +45,7 @@ jobs:
         type: docker-image
         source: {repository: alpine, tag: latest}
       inputs:
-      - name: resource-carts
+      - name: resource-git
       run:
-        dir: resource-carts
-        path: ./test/test.sh
-        args:
-        - /test/unit.py
+        dir: resource-git
+        path: ./run_test.sh
