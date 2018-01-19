@@ -6,6 +6,13 @@ resources:
     uri: https://github.com/microservices-demo/carts.git
     branch: master
 
+resources:
+- name: resource-carts
+  type: git
+  source:
+    uri: https://github.com/microservices-demo/carts.git
+    branch: master
+
 jobs:
 - name: job-build
   public: true
