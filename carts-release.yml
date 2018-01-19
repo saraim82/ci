@@ -45,5 +45,4 @@ jobs:
       inputs:
       - name: resource-git
       run:
-        dir: ci-training/carts/scripts
-        path:  ./run_test.sh
+        path:  resource-git/./scripts/run_test.sh
